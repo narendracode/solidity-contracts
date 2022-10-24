@@ -11,7 +11,7 @@ async function main() {
     const user = accounts[0];
     const functionSelector = new ethers.Contract(functionSelectorAddress, FunctionSelectorABI, user);
     console.log(`Sending request for reading function selector`)
-    const result = await functionSelector.getSelector('cancelList(address,uint256)')
+    const result = await functionSelector.getSelector('setRoyaltyActivation(address,bool)')
     console.log(`result  : ${result}`)
 }
 // We recommend this pattern to be able to use async/await everywhere
